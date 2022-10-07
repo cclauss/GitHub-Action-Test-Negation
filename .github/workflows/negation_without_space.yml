@@ -4,5 +4,5 @@ jobs:
   negation_without_space:
     runs-on: ubuntu-latest
     steps:
-      - if: !contains('Hello world', 'moon')
-        run: echo "This works but it is syntax highlighted as an error."
+      - if: ${{ !contains('Hello world', 'moon') }}
+        run: echo "This fails but it has no syntax highlighting."

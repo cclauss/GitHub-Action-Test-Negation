@@ -4,5 +4,5 @@ jobs:
   negation_with_space:
     runs-on: ubuntu-latest
     steps:
-      - run: exit 1
-        if: ! contains('Hello world', 'llo')
+      - if: ! contains('Hello world', 'moon')
+        run: echo "This fails but it has no syntax highlighting."

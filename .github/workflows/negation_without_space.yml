@@ -1,0 +1,8 @@
+name: negation_without_space
+on: [pull_request, push]
+jobs:
+  negation_without_space:
+    runs-on: ubuntu-latest
+    steps:
+      - if: !contains('Hello world', 'llo')
+        run: exit 1
